@@ -11,7 +11,7 @@ import './styles/App.css';
 //* funzione principale
 
 function App() {
-  const [selectedLanguage, setSelectedLanguage] = useState(languages[0]); // Mostra il primo di default
+  const [selectedLanguage, setSelectedLanguage] = useState(languages[null]); // Mostra il primo di default
 
   return (
     <div className="container">

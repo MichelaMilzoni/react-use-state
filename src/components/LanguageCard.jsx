@@ -12,8 +12,14 @@ import '../styles/LanguageCard.css';
 function LanguageCard({ selectedLanguage }) {
   return (
       <div className="card">
-        <h2>{selectedLanguage.title}</h2>
-        <p>{selectedLanguage.description}</p>
+        {selectedLanguage ? (
+          <>
+            <h2>{selectedLanguage.title}</h2>
+            <p>{selectedLanguage.description}</p>
+          </>
+        ) : (
+          <p>Seleziona un linguaggio per visualizzarne i dettagli.</p> // Messaggio predefinito
+        )}
       </div>
     );
 }
