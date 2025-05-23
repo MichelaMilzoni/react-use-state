@@ -1,20 +1,31 @@
 import { useState } from "react";
-import { handleError } from "./utils/errorHandler"; // 👈 Importa il gestore degli errori
+import languages from "./assets/data/languages.js"; // importazione dei dati
 
 //* importazione dei componenti
-import Header from './components/Header';
-import Main from './components/Main';
-import FooterBottom from './components/Footer';
-import Alert from "./components/Alert";
+import LanguageButton from './components/LanguageButton';
+import LanguageCard from './components/LanguageCard';
+
+//* importazione CSS
+import './styles/App.css';
+
+//* funzione principale
 
 function App() {
-    return (
-        <>
-            <Header />
-            <Main />
-            <Footer />
-        </>
-    );
+  const [selectedLanguage, setSelectedLanguage] = useState(languages[0]); // Mostra il primo di default
+
+  return (
+    <div className="container">
+      <h1>Seleziona un linguaggio</h1>
+
+      <div className="button-container">
+        {languages.map((lang) => (
+          <LanguageButton key={lang.id} language={lang} onSelect={setSelectedLanguage} />
+        ))}
+      </div>
+
+      <LanguageCard selectedLanguage={selectedLanguage} />
+    </div>
+  );
 }
 
 export default App;
