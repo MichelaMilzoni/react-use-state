@@ -11,11 +11,11 @@ import '../styles/LanguageCard.css';
  */
 function LanguageCard({ selectedLanguage }) {
   return (
-    <div className="card">
-    <h2>{selectedLanguage.title}</h2>
-    <p>{selectedLanguage.description}</p>
-    </div>
-  );
+      <div className="card">
+        <h2>{selectedLanguage.title}</h2>
+        <p>{selectedLanguage.description}</p>
+      </div>
+    );
 }
 
 export default LanguageCard;
