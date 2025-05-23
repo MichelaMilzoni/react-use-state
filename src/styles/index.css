@@ -101,13 +101,23 @@ h2 {
 
 button {
   width: 7rem;
+
   margin: 0.5rem;
   padding: 0.5rem 0.5rem;
+
   border-radius: 10px;
   background-color: white;
   border-color: white;
 
   font-size: 12px;
+
+  cursor: pointer;
+}
+
+.active-button {
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
 }
 
 p {

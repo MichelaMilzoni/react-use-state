@@ -9,9 +9,14 @@ import '../styles/LanguageButton.css';
  * @param {Function} props.onSelect - Funzione da chiamare quando il pulsante viene cliccato
  */
 
-function LanguageButton({ language, onSelect }) {
+function LanguageButton({ language, onSelect, isActive }) {
   return (
-    <button onClick={() => onSelect(language)}>{language.title}</button>
+    <button 
+      className={isActive ? "active-button" : ""}
+      onClick={() => onSelect(language)}
+      >
+        {language.title}
+      </button>
   );
 }
 

@@ -19,7 +19,12 @@ function App() {
 
       <div className="button-container">
         {languages.map((lang) => (
-          <LanguageButton key={lang.id} language={lang} onSelect={setSelectedLanguage} />
+          <LanguageButton 
+            key={lang.id}
+            language={lang}
+            onSelect={setSelectedLanguage} 
+            isActive={selectedLanguage && selectedLanguage.id === lang.id}
+          />
         ))}
       </div>
 
